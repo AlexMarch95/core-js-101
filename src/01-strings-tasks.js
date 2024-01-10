@@ -224,13 +224,12 @@ function getRectangleString(width, height) {
  *
  */
 function encodeToRot13(str) {
-  if (str === 'hello') {
-    return str.replace('hello', 'uryyb');
-  } return false;
+  const input = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  const output = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
+  return str.replace(/[a-z]/gi, (char) => output[input.indexOf(char)]);
 }
 
 /**
- * Returns true if the value is string; otherwise false.
  * @param {string} value
  * @return {boolean}
  *
