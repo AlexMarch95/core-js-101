@@ -27,10 +27,19 @@
  *  21 => 'Fizz'
  *
  */
-function getFizzBuzz(/* num */) {
-  throw new Error('Not implemented');
+function getFizzBuzz(num) {
+  let result = 0;
+  if (num % 2 === 0 || num % 2 === 1) {
+    result = num;
+  } if (num % 3 === 0) {``
+    result = 'Fizz';
+  } if (num % 5 === 0) {
+    result = 'Buzz';
+  } if (num % 3 === 0 && num % 5 === 0) {
+    result = 'FizzBuzz';
+  }
+  return result;
 }
-
 
 /**
  * Returns the factorial of the specified integer n.
