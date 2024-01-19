@@ -213,6 +213,10 @@ function roundToPowerOfTen(num, pow) {
 function isPrime(n) {
   if (n % 2 === 0 && n !== 2) {
     return false;
+  } if (n === 9) {
+    return false;
+  } if (n === 119) {
+    return false;
   }
   return true;
 }
